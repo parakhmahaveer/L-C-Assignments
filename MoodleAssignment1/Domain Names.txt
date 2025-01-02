@@ -1,0 +1,21 @@
+Problem Specific
+1. OrderDamReport
+2. PostDamStatus
+3. CheckDuplicateDamReports
+4. IsValidSelectBureaus
+5. ContinueProcessingCascade
+6. ValidateDuplicateVoe
+7. DisableRefresh
+8. 
+
+Solution Specific
+1. GetDefaultDamOrderSettings
+2. StopMonitor
+3. UpdateAlertEmail
+4. GetAlertEmails
+5. GetLatestCreditReport
+6. AutomatedStopMonitoring
+7. AddTransactionDetails
+8. UpdateBureauStatus
+9. GetListOfEmails
+10. FormatEmail
