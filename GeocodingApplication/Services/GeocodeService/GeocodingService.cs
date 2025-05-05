@@ -27,8 +27,8 @@ namespace GeocodingApplication.Services.GeocodeService
 
             if (geocodingResponse?.Status == "OK")
             {
-                var location = geocodingResponse.Results[0].Geometry.Location;
-                return new Coordinates(location.Lat, location.Lng);
+                var location = geocodingResponse.Results[0].Location;
+                return new Coordinates(location.Latitude, location.Longitude);
             }
 
             throw new InvalidOperationException($"Failed to get coordinates: {geocodingResponse?.Status}");

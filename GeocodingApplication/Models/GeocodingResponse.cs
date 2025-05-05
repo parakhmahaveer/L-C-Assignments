@@ -14,17 +14,12 @@ namespace GeocodingApplication.Models
 
     public class Result
     {
-        public Geometry Geometry { get; set; }
-    }
-
-    public class Geometry
-    {
         public Location Location { get; set; }
     }
 
     public class Location
     {
-        public double Lat { get; set; }
-        public double Lng { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     }
 }
