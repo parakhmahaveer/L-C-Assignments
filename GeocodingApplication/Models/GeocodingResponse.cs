@@ -15,6 +15,7 @@ namespace GeocodingApplication.Models
     public class Result
     {
         public Location Location { get; set; }
+        public string DisplayName { get; set; }
     }
 
     public class Location

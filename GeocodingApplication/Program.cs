@@ -1,4 +1,6 @@
 ﻿using GeocodingApplication.Services.GeocodeService;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace GeocodingApplication
 {
@@ -6,12 +8,19 @@ namespace GeocodingApplication
     {
         static async Task Main(string[] args)
         {
-            string baseUrl = "https://maps.googleapis.com/maps/api/geocode/json";
+            // Build configuration
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
 
-            IGeocodingService geocodingService = new GeocodingService(baseUrl);
+            var baseUrl = configuration["BaseUrl"];
+            var apiKey = configuration["ApiKey"];
 
-            Console.Write("Enter place name: "); 
-            string place = Console.ReadLine();
+            var geocodingService = new GeocodingService(baseUrl, apiKey);
+
+            Console.Write("Enter place name: ");
+            var place = Console.ReadLine();
 
             try
             {

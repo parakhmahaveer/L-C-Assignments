@@ -11,28 +11,30 @@ namespace GeocodingApplication.Services.GeocodeService
     public class GeocodingService : IGeocodingService
     {
         private readonly string _baseUrl;
+        private readonly string _apiKey;
+        private readonly HttpClient _httpClient;
 
-        public GeocodingService(string baseUrl)
+        public GeocodingService(string baseUrl, string apiKey)
         {
             _baseUrl = baseUrl;
+            _apiKey = apiKey;
+            _httpClient = new HttpClient();
         }
 
         public async Task<Coordinates> FetchCoordinatesAsync(string place)
         {
-            using var httpClient = new HttpClient();
-            string url = $"{_baseUrl}?address={Uri.EscapeDataString(place)}";
+            string url = $"{_baseUrl}?q={Uri.EscapeDataString(place)}&api_key={_apiKey}";
 
-            var response = await httpClient.GetStringAsync(url);
-            var geocodingResponse = JsonConvert.DeserializeObject<GeocodingResponse>(response);
+            var response = await _httpClient.GetStringAsync(url);
+            var locationResults = JsonConvert.DeserializeObject<GeocodingResponse>(response);
 
-            if (geocodingResponse?.Status == "OK")
+            if (locationResults != null && locationResults.Results.Count > 0)
             {
-                var location = geocodingResponse.Results[0].Location;
-                return new Coordinates(location.Latitude, location.Longitude);
+                var loc = locationResults.Results[0];
+                return new Coordinates(loc.Location.Latitude, loc.Location.Longitude, loc.DisplayName);
             }
 
-            throw new InvalidOperationException($"Failed to get coordinates: {geocodingResponse?.Status}");
-
+            throw new InvalidOperationException("Failed to retrieve location for the given place.");
         }
     }
 }

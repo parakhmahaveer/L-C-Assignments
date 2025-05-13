@@ -10,16 +10,18 @@ namespace GeocodingApplication.Models
     {
         public double Latitude { get; }
         public double Longitude { get; }
+        public string DisplayName { get; }
 
-        public Coordinates(double latitude, double longitude)
+        public Coordinates(double latitude, double longitude, string displayName)
         {
             Latitude = latitude;
             Longitude = longitude;
+            DisplayName = displayName;
         }
 
         public override string ToString()
         {
-            return $"Latitude: {Latitude}\nLongitude: {Longitude}";
+            return $"Name: {DisplayName}\nLatitude: {Latitude}\nLongitude: {Longitude}";
         }
     }
 }
