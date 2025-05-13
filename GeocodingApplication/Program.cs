@@ -15,7 +15,7 @@ namespace GeocodingApplication
 
             try
             {
-                var coordinates = await geocodingService.GetCoordinatesAsync(place);
+                var coordinates = await geocodingService.FetchCoordinatesAsync(place);
                 Console.WriteLine($"\n{coordinates}");
             }
             catch (Exception ex)

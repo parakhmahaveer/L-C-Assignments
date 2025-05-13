@@ -17,7 +17,7 @@ namespace GeocodingApplication.Services.GeocodeService
             _baseUrl = baseUrl;
         }
 
-        public async Task<Coordinates> GetCoordinatesAsync(string place)
+        public async Task<Coordinates> FetchCoordinatesAsync(string place)
         {
             using var httpClient = new HttpClient();
             string url = $"{_baseUrl}?address={Uri.EscapeDataString(place)}";
