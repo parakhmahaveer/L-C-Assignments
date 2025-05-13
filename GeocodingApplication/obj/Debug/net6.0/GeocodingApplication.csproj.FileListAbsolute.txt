@@ -1,0 +1,5 @@
+D:\L&C Assignment\L-C-Assignments\GeocodingApplication\obj\Debug\net6.0\GeocodingApplication.csproj.AssemblyReference.cache
+D:\L&C Assignment\L-C-Assignments\GeocodingApplication\obj\Debug\net6.0\GeocodingApplication.GeneratedMSBuildEditorConfig.editorconfig
+D:\L&C Assignment\L-C-Assignments\GeocodingApplication\obj\Debug\net6.0\GeocodingApplication.AssemblyInfoInputs.cache
+D:\L&C Assignment\L-C-Assignments\GeocodingApplication\obj\Debug\net6.0\GeocodingApplication.AssemblyInfo.cs
+D:\L&C Assignment\L-C-Assignments\GeocodingApplication\obj\Debug\net6.0\GeocodingApplication.csproj.CoreCompileInputs.cache
