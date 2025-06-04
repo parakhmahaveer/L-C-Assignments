@@ -24,7 +24,6 @@ namespace DivisorCounter.Tests
         [Fact]
         public void CountMatchingPairs_Returns2_For4()
         {
-            //Compilation error
             var service = new DivisorService();
             var analyzer = new DivisorAnalyzer(service); 
             var result = analyzer.CountMatchingDivisorPairs(4);
