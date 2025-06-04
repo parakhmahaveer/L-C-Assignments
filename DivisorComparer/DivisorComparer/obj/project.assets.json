@@ -1,0 +1,97 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "DivisorComparer.Logic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/DivisorComparer.Logic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DivisorComparer.Logic.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DivisorComparer.Logic/1.0.0": {
+      "type": "project",
+      "path": "../DivisorComparer.Logic/DivisorComparer.Logic.csproj",
+      "msbuildProject": "../DivisorComparer.Logic/DivisorComparer.Logic.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "DivisorComparer.Logic >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Mahaveer.parakh\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\L&C Assignment\\L-C-Assignments\\DivisorComparer\\DivisorComparer\\DivisorComparerConsoleApp.csproj",
+      "projectName": "DivisorComparerConsoleApp",
+      "projectPath": "D:\\L&C Assignment\\L-C-Assignments\\DivisorComparer\\DivisorComparer\\DivisorComparerConsoleApp.csproj",
+      "packagesPath": "C:\\Users\\Mahaveer.parakh\\.nuget\\packages\\",
+      "outputPath": "D:\\L&C Assignment\\L-C-Assignments\\DivisorComparer\\DivisorComparer\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Mahaveer.parakh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "D:\\L&C Assignment\\L-C-Assignments\\DivisorComparer\\DivisorComparer.Logic\\DivisorComparer.Logic.csproj": {
+              "projectPath": "D:\\L&C Assignment\\L-C-Assignments\\DivisorComparer\\DivisorComparer.Logic\\DivisorComparer.Logic.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
