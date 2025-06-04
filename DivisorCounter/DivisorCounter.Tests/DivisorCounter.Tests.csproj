@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DivisorCounter.Services\DivisorCounter.Services.csproj" />
+  </ItemGroup>
+
 </Project>
