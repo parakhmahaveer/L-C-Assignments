@@ -11,11 +11,15 @@ namespace DivisorCounter.Services
     {
         public int CountDivisors(int number)
         {
-            if(number == 1)
+            int count = 0;
+            for (int index = 1; index <= Math.Sqrt(number); index++)
             {
-                return 1;
+                if (number % index == 0)
+                {
+                    count += (index == number / index) ? 1 : 2;
+                }
             }
-            return 10;
+            return count;
         }
     }
 }
