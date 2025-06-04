@@ -29,5 +29,13 @@ namespace DivisorCounter.Tests
             var result = analyzer.CountMatchingDivisorPairs(4);
             Assert.Equal(2, result);
         }
+
+        [Fact]
+        public void CountMatchingPairs_ReturnsZero_ForLargeNegative()
+        {
+            var processor = new DivisorAnalyzer(new DivisorService());
+            int result = processor.CountMatchingDivisorPairs(-1000000);
+            Assert.Equal(0, result);
+        }
     }
 }
