@@ -12,7 +12,6 @@ namespace DivisorCounter.Tests
             Assert.Equal(1, result);
         }
 
-
         [Fact]
         public void CountDivisors_Return3_For4()
         {
