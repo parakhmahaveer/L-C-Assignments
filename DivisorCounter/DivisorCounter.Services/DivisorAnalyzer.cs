@@ -18,7 +18,13 @@ namespace DivisorCounter.Services
 
         public int CountMatchingDivisorPairs(int inputNumber)
         {
-            return 0;
+            int count = 0;
+            for (int index = 1; index < inputNumber; index++)
+            {
+                if (_divisorService.CountDivisors(index) == _divisorService.CountDivisors(inputNumber - index))
+                    count++;
+            }
+            return count;
         }
     }
 }
